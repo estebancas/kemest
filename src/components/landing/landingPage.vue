@@ -39,16 +39,19 @@
         </b-row>
       </b-container>
     </div>
+    <CardSlider/>
   </div>
 </template>
 
 <script>
 import CustomCarousel from "./carousel.vue";
+import CardSlider from "./slider/cardSlider.vue"
 
 export default {
   name: "LandingPage",
   components: {
-    CustomCarousel
+    CustomCarousel,
+    CardSlider
   },
   data() {
     return {
