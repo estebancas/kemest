@@ -1,4 +1,4 @@
-# Kiiwie
+# kiwie
 
 ## Project setup
 ```

@@ -1,7 +1,7 @@
 <template>
   <div class="landing mt-4">
     <CustomCarousel/>
-    <div class="shop-items mt-4">
+    <div class="shop-items mt-4 mb-4">
       <b-container fluid>
         <b-row>
           <b-col class="p-0 mr-3">
@@ -82,8 +82,16 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: black;
-  opacity: 0.5;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.card-holder .picture-overlay div {
+  color: white;
+}
+
+.card-holder .picture-overlay label:hover {
+  color: #dbfcde !important;
+  cursor: pointer;
 }
 
 .card-holder a {

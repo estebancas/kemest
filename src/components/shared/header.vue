@@ -3,7 +3,7 @@
     <div class="header-banner py-2 mb-3">
       <p class="my-2">Free Shipping Over $50 + 3 Free Samples With Every Order</p>
     </div>
-    <h2 class="mt-5">kiiwie</h2>
+    <h2 class="mt-5">kiwie</h2>
     <b-container>
       <b-row>
         <b-col cols="12 p-0">
@@ -65,6 +65,7 @@ export default {
 }
 
 .nav ul li a:hover {
-  color: #dbfcde;
+  background-color: #dbfcde;
+  color: white;
 }
 </style>
