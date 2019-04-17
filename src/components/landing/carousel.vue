@@ -97,7 +97,7 @@ export default {
 }
 
 .overlay-info label:hover {
-  color: #e7bd70 !important;
+  color: #dbfcde !important;
   cursor: pointer;
 }
 </style>

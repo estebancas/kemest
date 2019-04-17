@@ -3,7 +3,7 @@
     <div class="header-banner py-2 mb-3">
       <p class="my-2">Free Shipping Over $50 + 3 Free Samples With Every Order</p>
     </div>
-    <h2 class="mt-5">Valencias Beauty</h2>
+    <h2 class="mt-5">kiiwie</h2>
     <b-container>
       <b-row>
         <b-col cols="12 p-0">
@@ -41,7 +41,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .header-banner {
-  background-color: #e7bd70;
+  background-color: #dbfcde;
 }
 
 .nav ul {
@@ -65,6 +65,6 @@ export default {
 }
 
 .nav ul li a:hover {
-  color: #e7bd70;
+  color: #dbfcde;
 }
 </style>

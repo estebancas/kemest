@@ -1,4 +1,4 @@
-# valencias-beauty
+# Kiiwie
 
 ## Project setup
 ```
