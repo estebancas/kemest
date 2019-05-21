@@ -1,7 +1,7 @@
 <template>
   <div id="slider" class="slider" @mousemove="mouseMoving($event)">
     <div class="slider-cards" :style="`transform: translate3d(${cardsX}px,0,0)`">
-      <div
+      <!-- <div
         @mousedown="startDrag($event)"
         @mouseup="stopDrag($event)"
         v-for="(slide, index) in slides"
@@ -9,30 +9,47 @@
         class="slider-card"
       >
         <img :src="slide.image" :alt="slide.title" draggable="false">
-      </div>
+      </div> -->
+      <SingleSlider
+        v-for="(slide, index) in slides"
+        @mousedown="startDrag($event)"
+        @mouseup="stopDrag($event)"
+        v-bind:key="index"
+        v-bind:img="slide.image"
+        v-bind:price="slide.price"
+        v-bind:name="slide.name">
+      </SingleSlider>
     </div>
   </div>
 </template>
 <script>
+import SingleSlider from "./slide.vue";
+
 export default {
   name: "CardSlider",
+  components: {
+    SingleSlider
+  },
   data() {
     return {
       slides: [
         {
-          title: "Ready Player One",
+          name: "test one",
           image:
-            "https://picsum.photos/200/300/?random"
+            "https://picsum.photos/200/300/?random",
+          price: "29.00"
         },
         {
-          title: "Avengers: Infinity War",
+          name: "test two",
           image:
-            "https://picsum.photos/200/300/?random"
+            "https://picsum.photos/200/300/?random",
+          price: "23.80"
         },
         {
-          title: "Coco",
+          name: "test three",
           image:
-            "https://picsum.photos/200/300/?random"
+            "https://picsum.photos/200/300/?random",
+          price: "30"
         }
       ],
       selectedIndex: 0,
@@ -80,23 +97,9 @@ export default {
 
 .slider-cards {
   position: relative;
-  width: 900px;
-  margin: 20px 50px;
+  width: 1785px;
+  margin: 20px 5px;
   z-index: 1;
-}
-
-.slider-card {
-  display: inline-block;
-  background-color: grey;
-  overflow: hidden;
-  width: 260px;
-  height: 360px;
-  margin-right: 30px;
-  border-radius: 12px;
-}
-
-.slider-card img {
-  width: 100%;
 }
 </style>
 
