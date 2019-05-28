@@ -70,7 +70,6 @@ export default {
 
 .picture-holder:hover .picture-overlay {
   height: 6%;
-  padding: 5px;
 }
 
 .picture-overlay {
