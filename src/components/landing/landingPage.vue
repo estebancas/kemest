@@ -2,26 +2,30 @@
   <div class="landing">
     <CustomCarousel/>
 
-    <shopItemTop :backgroundImgs="backgroundImgs"/>
+    <ShopItemTop :backgroundImgs="backgroundImgs"/>
 
     <CardSlider/>
 
-    <shopItemBottom :backgroundImgs="backgroundImgs"/>
+    <ShopItemBottom :backgroundImgs="backgroundImgs"/>
+
+    <Community/>
   </div>
 </template>
 <script>
 import CustomCarousel from "./carousel.vue";
 import CardSlider from "./slider/cardSlider.vue";
-import shopItemTop from "./shopItems/shopItemTop.vue"
-import shopItemBottom from "./shopItems/shopItemBottom.vue"
+import ShopItemTop from "./shopItems/shopItemTop.vue"
+import ShopItemBottom from "./shopItems/shopItemBottom.vue"
+import Community from "./community/community.vue"
 
 export default {
   name: "LandingPage",
   components: {
     CustomCarousel,
     CardSlider,
-    shopItemTop,
-    shopItemBottom
+    ShopItemTop,
+    ShopItemBottom,
+    Community
   },
   data() {
     return {

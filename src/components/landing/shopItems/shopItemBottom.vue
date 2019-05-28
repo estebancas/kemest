@@ -20,9 +20,11 @@
         </b-col>
         <b-col sm="7" class="p-0 text-center">
           <div class="card-holder">
-            <div class="picture-overlay right-picture d-flex justify-content-start align-items-center pl-5 text-left">
+            <div
+              class="picture-overlay right-picture d-flex justify-content-start align-items-center pl-5 text-left"
+            >
               <div>
-                <p class="text-left mb-5">ALL ABOUT THE BASE </p>
+                <p class="text-left mb-5">ALL ABOUT THE BASE</p>
                 <h3 class="text-left mb-4">Nude Liquid Matte Foundation</h3>
                 <label class="text-left">SHOP NOW ></label>
               </div>
@@ -40,12 +42,12 @@
 </template>
 <script>
 export default {
-  name: "shopItemTop",
+  name: "ShopItemTop",
   props: {
     backgroundImgs: {
-        type: Object,
-        required: true,
-        default: {}
+      type: Object,
+      required: true,
+      default: {}
     }
   }
 };
@@ -94,6 +96,10 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.right-picture h3 {
+  width: 60%;
 }
 </style>
 
