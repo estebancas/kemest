@@ -1,5 +1,5 @@
 <template>
-  <div class="landing mt-4">
+  <div class="landing">
     <CustomCarousel/>
     <div class="shop-items mt-4 mb-4">
       <b-container fluid>
@@ -72,6 +72,7 @@ export default {
 <style scoped>
 .landing {
   padding: 0 5%;
+  margin-top: 210px;
 }
 
 .card-holder {
