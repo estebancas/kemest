@@ -36,19 +36,19 @@ export default {
         {
           name: "test one",
           image:
-            "https://picsum.photos/200/300/?random",
+            "https://picsum.photos/id/1053/3596/2393",
           price: "29.00"
         },
         {
           name: "test two",
           image:
-            "https://picsum.photos/200/300/?random",
+            "https://picsum.photos/id/11/2500/1667",
           price: "23.80"
         },
         {
           name: "test three",
           image:
-            "https://picsum.photos/200/300/?random",
+            "https://picsum.photos/id/114/3264/2448",
           price: "30"
         }
       ],
