@@ -7,7 +7,14 @@
         <b-col v-for="(col, index) in imgs" v-bind:key="index" class="text-center mr-3 p-0">
           <div class="img-holder">
             <div class="img-overlay">
-              <div class="content"></div>
+              <div class="content">
+                <a>
+                  3
+                  <span>
+                    <font-awesome-icon :icon="['far', 'comment']"/>
+                  </span>
+                </a>
+              </div>
             </div>
             <a>
               <img v-bind:src="col.img">
