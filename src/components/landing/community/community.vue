@@ -8,12 +8,20 @@
           <div class="img-holder">
             <div class="img-overlay">
               <div class="content">
-                <a>
-                  3
-                  <span>
-                    <font-awesome-icon :icon="['far', 'comment']"/>
-                  </span>
-                </a>
+                <b-row>
+                  <b-col>
+                    <a>
+                      <span>4</span>
+                      <font-awesome-icon :icon="['far', 'heart']"/>
+                    </a>
+                  </b-col>
+                  <b-col>
+                    <a>
+                      <span>3</span>
+                      <font-awesome-icon :icon="['far', 'comment']"/>
+                    </a>
+                  </b-col>
+                </b-row>
               </div>
             </div>
             <a>
@@ -72,55 +80,66 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .imgs-section {
   margin-top: 90px;
+  .img-holder {
+    width: 100%;
+    position: relative;
+    &:hover .img-overlay {
+      display: flex;
+      color: #C0C0C0;
+    }
+    a {
+      display: block;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+      }
+      figure {
+        margin: 0;
+        min-width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div {
+          width: 100%;
+          height: 200px;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
 }
 
-.img-holder {
-  width: 100%;
-  position: relative;
-}
-
-.img-holder .img-overlay {
+.img-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   display: none;
-}
-
-.img-holder:hover .img-overlay {
-  display: block;
-}
-
-.img-holder a {
-  display: block;
-  width: 100%;
-}
-
-.img-holder a img {
-  width: 100%;
-  height: auto;
-}
-
-.img-holder a figure {
-  margin: 0;
-  min-width: 100%;
-  min-height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.img-holder a figure div {
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  .content {
+    a {
+      cursor: pointer;
+      &:hover {
+        color: white !important;
+      }
+      span {
+        margin-right: 5px;
+      }
+      /deep/ svg {
+        vertical-align: middle;
+      }
+    }
+  }
 }
 </style>
 
