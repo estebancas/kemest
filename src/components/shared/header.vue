@@ -49,7 +49,7 @@ export default {
 }
 
 .header .title {
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
 
 .header-banner {
@@ -77,7 +77,6 @@ export default {
 }
 
 .nav ul li a:hover {
-  background-color: #dbfcde;
-  color: white;
+  color: #009975;
 }
 </style>

@@ -2,12 +2,19 @@
   <div class="footer mt-5 py-5">
     <b-container fluid>
       <b-row class="justify-content-center my-3">
-        <b-col sm="4" px-5>
+        <b-col sm="4" class="text-left" px-5>
             <h6 class="text-left mb-4">JOIN OUR NEWSLETTER</h6>
             <b-form-input type="email" placeholder="Enter your email here*"></b-form-input>
-            <FlatButton class="mt-3" text="Subscribe Now"/>
+            <FlatButton class="mt-3 mb-4" text="Subscribe Now"/>
+            <label class="mt-5">&copy;2019 by Phantom.creative</label>
         </b-col>
-        <b-col sm="4" px-5>2</b-col>
+        <b-col sm="4" px-5>
+          <b-row class="pt-3 mt-4">
+            <b-col sm="4">1</b-col>
+            <b-col sm="4">2</b-col>
+            <b-col sm="4">3</b-col>
+          </b-row>
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -27,6 +34,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .footer {
-  border-top: 2px solid;
+  border-top: 1px solid;
+  label {
+    color: #555555;
+    font-weight: 100;
+    font-family: monospace;
+  }
 }
 </style>
