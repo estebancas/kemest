@@ -40,7 +40,7 @@
 </template>
 <script>
 export default {
-  name: "shopItemTop",
+  name: "ShopItemTop",
   props: {
     backgroundImgs: {
         type: Object,
