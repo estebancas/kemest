@@ -1,5 +1,5 @@
 <template>
-  <div class="landing">
+  <div class="landing px-0 px-md-5">
     <CustomCarousel/>
 
     <ShopItemTop :backgroundImgs="backgroundImgs"/>
@@ -14,9 +14,9 @@
 <script>
 import CustomCarousel from "./carousel.vue";
 import CardSlider from "./slider/cardSlider.vue";
-import ShopItemTop from "./shopItems/shopItemTop.vue"
-import ShopItemBottom from "./shopItems/shopItemBottom.vue"
-import Community from "./community/community.vue"
+import ShopItemTop from "./shopItems/shopItemTop.vue";
+import ShopItemBottom from "./shopItems/shopItemBottom.vue";
+import Community from "./community/community.vue";
 
 export default {
   name: "LandingPage",
@@ -47,9 +47,11 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .landing {
-  padding: 0 5%;
   margin-top: 210px;
+  @media screen and (max-width: 768px) {
+    margin-top: 0;
+  }
 }
 </style>
