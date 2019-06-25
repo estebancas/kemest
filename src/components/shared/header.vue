@@ -5,7 +5,7 @@
     </div>
     <div class="px-4 position-relative">
       <h2 class="mb-3 mt-3 mt-md-5 mb-md-0 title">kiwie</h2>
-      <a class="hamburguer-menu d-block d-md-none">
+      <a class="hamburguer-menu d-block d-md-none" v-on:click="isOpen = true">
         <span>
           <font-awesome-icon :icon="['fas', 'bars']"/>
         </span>
@@ -36,13 +36,20 @@
         </b-col>
       </b-row>
     </b-container>
-    <div class="fixed-top mobile-menu">
+    <div v-if="isOpen" class="fixed-top mobile-menu">
+      <a class="close-mobile-menu" v-on:click="isOpen = false">
+        <span>
+          <font-awesome-icon :icon="['fas', 'times']"/>
+        </span>
+      </a>
       <div class="d-flex justify-content-center">
         <ul class="mobile-nav">
           <li class="d-flex justify-content-center align-items-center">
             <a href="#">Home</a>
           </li>
-          <li class="d-flex justify-content-center align-items-center position-relative">
+          <li
+            class="d-flex justify-content-center align-items-center position-relative flex-column"
+          >
             <a href="#">Shop</a>
             <a class="arrow position-absolute" v-b-toggle.collapse-1>
               <span>
@@ -50,7 +57,17 @@
               </span>
             </a>
             <b-collapse id="collapse-1" class="mt-2">
-              <h5>Hi!</h5>
+              <ul style="margin: 0 !important">
+                <li>
+                  <a href="#">Flower Pots</a>
+                </li>
+                <li>
+                  <a href="#">Cement crafts</a>
+                </li>
+                <li>
+                  <a href="#">Exfoliants</a>
+                </li>
+              </ul>
             </b-collapse>
           </li>
           <li class="d-flex justify-content-center align-items-center">
@@ -70,7 +87,12 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  data() {
+    return {
+      isOpen: false
+    };
+  }
 };
 </script>
 
@@ -82,6 +104,9 @@ export default {
   top: 0;
   z-index: 1000;
   background: white;
+  @media screen and (max-width: 768px) {
+    position: unset;
+  }
 }
 
 .hamburguer-menu {
@@ -106,6 +131,13 @@ export default {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   height: 100%;
+  .close-mobile-menu {
+    padding: 5px 10px;
+    position: absolute;
+    top: 4%;
+    right: 9%;
+    font-size: 27px;
+  }
   ul {
     list-style: none;
     width: 100%;
@@ -121,6 +153,7 @@ export default {
         right: 25%;
         font-size: 20px;
         padding: 5px 10px;
+        top: 0px;
       }
     }
   }

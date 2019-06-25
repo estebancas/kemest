@@ -15,33 +15,17 @@
       v-model="slide"
       :interval="4000"
       background="#ababab"
-      img-width="1024"
-      img-height="480"
+      :img-width="carousel.width"
+      :img-height="carousel.height"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
+      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=52`"></b-carousel-slide>
 
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"></b-carousel-slide>
+      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=54`"></b-carousel-slide>
 
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <img
-          slot="img"
-          class="d-block img-fluid w-100"
-          width="1024"
-          height="480"
-          src="https://picsum.photos/1024/480/?image=55"
-          alt="image slot"
-        >
-      </b-carousel-slide>
+      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=58`"></b-carousel-slide>
     </b-carousel>
   </div>
 </template>
@@ -52,8 +36,20 @@ export default {
   data() {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+      window: {
+        width: 0,
+        height: 0
+      },
+      carousel: {
+        width: 1024,
+        height: 480
+      }
     };
+  },
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
   },
   methods: {
     onSlideStart(slide) {
@@ -61,6 +57,15 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false;
+    },
+    handleResize() {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+      console.log('type', typeof this.window.width);
+      if (this.window.width < this.window.height && this.window.width <= 768) {
+        this.carousel.width = this.window.width;
+        this.carousel.height = this.window.width;
+      }
     }
   }
 };
