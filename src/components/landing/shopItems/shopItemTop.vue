@@ -2,7 +2,7 @@
   <div class="shop-items-top mt-4 mb-4">
     <b-container fluid>
       <b-row>
-        <b-col class="p-0 mr-3">
+        <b-col cols="12" md="6" class="p-0 pr-md-3 mb-4 mb-md-0">
           <div class="card-holder">
             <div class="picture-overlay d-flex justify-content-center align-items-center">
               <div>
@@ -18,7 +18,7 @@
             </a>
           </div>
         </b-col>
-        <b-col class="p-0 ml-3">
+        <b-col cols="12" md="6" class="p-0 pl-md-3">
           <div class="card-holder">
             <div class="picture-overlay d-flex justify-content-center align-items-center">
               <div>
