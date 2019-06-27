@@ -3,8 +3,8 @@
     <b-container fluid>
       <h2># Join the KIWIE commerce Community</h2>
 
-      <b-row class="imgs-section">
-        <b-col v-for="(col, index) in imgs" v-bind:key="index" class="text-center mr-3 p-0">
+      <b-row class="imgs-section mt-5 flex-wrap flex-md-nowrap">
+        <b-col v-for="(col, index) in imgs" v-bind:key="index" cols=12 md="auto" class="text-center mr-0 mb-2 mb-md-0 mr-md-3 p-0 d-flex flex-fill">
           <div class="img-holder">
             <div class="img-overlay">
               <div class="content">
@@ -81,8 +81,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.community-section {
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 5vw;
+    }
+  }
+}
+
 .imgs-section {
-  margin-top: 90px;
   .img-holder {
     width: 100%;
     position: relative;

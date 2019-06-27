@@ -4,7 +4,6 @@
 
     <ShopItemTop :backgroundImgs="backgroundImgs"/>
 
-    <!-- <CardSlider/> -->
     <CardSwiper/>
 
     <ShopItemBottom :backgroundImgs="backgroundImgs"/>
@@ -14,7 +13,6 @@
 </template>
 <script>
 import CustomCarousel from "./carousel.vue";
-// import CardSlider from "./slider/cardSlider.vue";
 import CardSwiper from "./slider/cardSwiper";
 import ShopItemTop from "./shopItems/shopItemTop.vue";
 import ShopItemBottom from "./shopItems/shopItemBottom.vue";
