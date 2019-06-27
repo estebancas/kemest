@@ -47,7 +47,7 @@ export default {
     backgroundImgs: {
       type: Object,
       required: true,
-      default: {}
+      default: () => {}
     }
   }
 };
