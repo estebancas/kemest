@@ -1,19 +1,12 @@
 <template>
-  <div class="slider-card">
+  <div class="slider-card px-3">
     <div class="picture-holder">
       <a>
         <figure>
-          <img
-            :src="img"
-            draggable="false"
-            @mousedown="triggerStartDrag($event)"
-            @mouseup="triggerStopDrag($event)"
-          >
+          <img :src="img" draggable="false">
         </figure>
       </a>
-      <div class="picture-overlay text-center">
-        QUICK VIEW
-      </div>
+      <div class="picture-overlay text-center">QUICK VIEW</div>
     </div>
     <div class="item-description pt-2 d-flex">
       <b-row>
@@ -43,33 +36,32 @@ export default {
       type: String,
       required: true
     }
-  },
-  methods: {
-    triggerStartDrag(e) {
-      this.$emit("mousedown", e);
-    },
-    triggerStopDrag(e) {
-      this.$emit("mouseup", e);
-    }
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+@mixin desktop-card() {
+  &:hover .picture-overlay {
+    height: 10%;
+  }
+  // &:hover a img {
+  //   -webkit-transform: scale(1.3);
+  //   transform: scale(1.3);
+  // }
+}
 .slider-card {
   display: inline-block;
   overflow: hidden;
-  width: 565px;
-  height: 565px;
-  margin-right: 30px;
+  width: 100%;
+  height: 100%;
 }
 
 .picture-holder {
   height: 90%;
   position: relative;
-}
-
-.picture-holder:hover .picture-overlay {
-  height: 6%;
+  @media (min-width: 768px) {
+    @include desktop-card();
+  }
 }
 
 .picture-overlay {
@@ -81,7 +73,7 @@ export default {
   cursor: pointer;
   height: 0;
   overflow: hidden;
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 .picture-holder a {
@@ -108,9 +100,9 @@ export default {
   transition: 0.3s ease-in-out;
 }
 
-.picture-holder:hover a img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-}
+// .picture-holder:hover a img {
+//   -webkit-transform: scale(1.3);
+//   transform: scale(1.3);
+// }
 </style>
 
