@@ -21,11 +21,17 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=52`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=52`"
+      ></b-carousel-slide>
 
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=54`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=54`"
+      ></b-carousel-slide>
 
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=58`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=58`"
+      ></b-carousel-slide>
     </b-carousel>
   </div>
 </template>
@@ -48,7 +54,7 @@ export default {
     };
   },
   created() {
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.handleResize();
   },
   methods: {
@@ -61,6 +67,7 @@ export default {
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
+
       if (this.window.width < this.window.height && this.window.width <= 768) {
         this.carousel.width = this.window.width;
         this.carousel.height = this.window.width;
