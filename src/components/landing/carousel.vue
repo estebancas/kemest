@@ -43,7 +43,7 @@ export default {
       },
       carousel: {
         width: 1024,
-        height: 480
+        height: 400
       }
     };
   },
@@ -52,16 +52,15 @@ export default {
     this.handleResize();
   },
   methods: {
-    onSlideStart(slide) {
+    onSlideStart() {
       this.sliding = true;
     },
-    onSlideEnd(slide) {
+    onSlideEnd() {
       this.sliding = false;
     },
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
-      console.log('type', typeof this.window.width);
       if (this.window.width < this.window.height && this.window.width <= 768) {
         this.carousel.width = this.window.width;
         this.carousel.height = this.window.width;
