@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions } from "vuex";
 
 export default {
   name: "CustomCarousel",
@@ -56,23 +56,22 @@ export default {
     this.handleResize();
   },
   methods: {
-    ...mapActions('Globals', ['fetchViewportDevice']),
+    ...mapActions("Globals", ["fetchViewportDevice"]),
     onSlideStart() {
       this.sliding = true;
     },
     onSlideEnd() {
       this.sliding = false;
     },
-    handleResize() {
-      this.fetchViewportDevice()
-        .then(data => {
-          if (data.isMobile) {
-            this.carousel.width = data.innerWidth;
-            this.carousel.height = data.innerWidth;
-          }
-        });
+    async handleResize() {
+      const response = await this.fetchViewportDevice();
+
+      if (response.isMobile) {
+        this.carousel.width = response.innerWidth;
+        this.carousel.height = response.innerWidth;
+      }
     }
-  },
+  }
 };
 </script>
 
