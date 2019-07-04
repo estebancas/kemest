@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "CustomCarousel",
   data() {
@@ -58,6 +60,7 @@ export default {
     this.handleResize();
   },
   methods: {
+    ...mapActions('Globals', ['fetchViewportDevice']),
     onSlideStart() {
       this.sliding = true;
     },
@@ -68,12 +71,15 @@ export default {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
 
+      this.fetchViewportDevice()
+        .then((data) => console.log('the data', data));
+
       if (this.window.width < this.window.height && this.window.width <= 768) {
         this.carousel.width = this.window.width;
         this.carousel.height = this.window.width;
       }
     }
-  }
+  },
 };
 </script>
 

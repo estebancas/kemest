@@ -5,6 +5,8 @@ import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import store from './store/store'
+
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBars, faChevronDown, faTimes } from '@fortawesome/free-solid-svg-icons'
@@ -31,4 +33,5 @@ import './assets/css/main.css'
 
 new Vue({
   render: h => h(App),
+  store,
 }).$mount('#app')
