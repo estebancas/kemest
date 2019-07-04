@@ -45,10 +45,6 @@ export default {
     return {
       slide: 0,
       sliding: null,
-      window: {
-        width: 0,
-        height: 0
-      },
       carousel: {
         width: 1024,
         height: 400
@@ -68,22 +64,18 @@ export default {
       this.sliding = false;
     },
     handleResize() {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
-
       this.fetchViewportDevice()
-        .then((data) => console.log('the data', data));
-
-      if (this.window.width < this.window.height && this.window.width <= 768) {
-        this.carousel.width = this.window.width;
-        this.carousel.height = this.window.width;
-      }
+        .then(data => {
+          if (data.isMobile) {
+            this.carousel.width = data.innerWidth;
+            this.carousel.height = data.innerWidth;
+          }
+        });
     }
   },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel-holder {
   position: relative;
