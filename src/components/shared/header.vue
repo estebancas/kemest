@@ -118,7 +118,7 @@ export default {
 }
 
 .mobile-menu {
-  background-color: #dbfcde;
+  background-color: $primary-color;
   height: 100%;
   .close-mobile-menu {
     padding: 5px 10px;
@@ -153,7 +153,7 @@ export default {
 }
 
 .header-banner {
-  background-color: #dbfcde;
+  background-color: $primary-color;
 }
 
 .nav ul {
@@ -177,6 +177,6 @@ export default {
 }
 
 .nav ul li a:hover {
-  color: #009975;
+  color: $secondary-color;
 }
 </style>

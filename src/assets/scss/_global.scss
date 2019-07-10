@@ -1,3 +1,5 @@
+@import "utilities/variables";
+
 /deep/ input {
   border-radius: 0;
   -webkit-appearance: none;
@@ -15,7 +17,7 @@
   flex: 1;
   text-overflow: ellipsis;
   &:focus {
-    border-color: #009975 !important;
+    border-color: $secondary-color !important;
     border-width: 0 0 2px 0 !important;
   }
 }
@@ -47,15 +49,15 @@ label:focus,
 
 .btn-primary {
   background-color: transparent;
-  color: #009975;
-  border: 1px solid #009975;
+  color: $secondary-color;
+  border: 1px solid $secondary-color;
   padding: 2px 10px;
   width: 100%;
   border-radius: 2px;
   &:hover {
-      background-color: #009975;
+      background-color: $secondary-color;
       color: white;
-      border-color: #009975;
+      border-color: $secondary-color;
   }
 }
 
