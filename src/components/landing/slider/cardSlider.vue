@@ -1,15 +1,6 @@
 <template>
   <div id="slider" class="slider" @mousemove="mouseMoving($event)">
     <div class="slider-cards" :style="`transform: translate3d(${cardsX}px,0,0)`">
-      <!-- <div
-        @mousedown="startDrag($event)"
-        @mouseup="stopDrag($event)"
-        v-for="(slide, index) in slides"
-        :key="index"
-        class="slider-card"
-      >
-        <img :src="slide.image" :alt="slide.title" draggable="false">
-      </div> -->
       <SingleSlider
         v-for="(slide, index) in slides"
         @mousedown="startDrag($event)"

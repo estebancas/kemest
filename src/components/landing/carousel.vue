@@ -21,57 +21,60 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=52`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=52`"
+      ></b-carousel-slide>
 
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=54`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=54`"
+      ></b-carousel-slide>
 
-      <b-carousel-slide :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=58`"></b-carousel-slide>
+      <b-carousel-slide
+        :img-src="`https://picsum.photos/${this.carousel.width}/${this.carousel.height}/?image=58`"
+      ></b-carousel-slide>
     </b-carousel>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 export default {
   name: "CustomCarousel",
   data() {
     return {
       slide: 0,
       sliding: null,
-      window: {
-        width: 0,
-        height: 0
-      },
       carousel: {
         width: 1024,
-        height: 480
+        height: 400
       }
     };
   },
   created() {
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.handleResize();
   },
   methods: {
-    onSlideStart(slide) {
+    ...mapActions("Globals", ["fetchViewportDevice"]),
+    onSlideStart() {
       this.sliding = true;
     },
-    onSlideEnd(slide) {
+    onSlideEnd() {
       this.sliding = false;
     },
-    handleResize() {
-      this.window.width = window.innerWidth;
-      this.window.height = window.innerHeight;
-      console.log('type', typeof this.window.width);
-      if (this.window.width < this.window.height && this.window.width <= 768) {
-        this.carousel.width = this.window.width;
-        this.carousel.height = this.window.width;
+    async handleResize() {
+      const response = await this.fetchViewportDevice();
+
+      if (response.isMobile) {
+        this.carousel.width = response.innerWidth;
+        this.carousel.height = response.innerWidth;
       }
     }
   }
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .carousel-holder {
   position: relative;

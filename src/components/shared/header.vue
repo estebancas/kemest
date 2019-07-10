@@ -118,18 +118,7 @@ export default {
 }
 
 .mobile-menu {
-  background: #1d976c; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #dbfcde,
-    #93f9b9
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #dbfcde,
-    #93f9b9
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background-color: $primary-color;
   height: 100%;
   .close-mobile-menu {
     padding: 5px 10px;
@@ -164,7 +153,7 @@ export default {
 }
 
 .header-banner {
-  background-color: #dbfcde;
+  background-color: $primary-color;
 }
 
 .nav ul {
@@ -188,6 +177,6 @@ export default {
 }
 
 .nav ul li a:hover {
-  color: #009975;
+  color: $secondary-color;
 }
 </style>
