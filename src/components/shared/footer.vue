@@ -2,7 +2,7 @@
   <div class="footer mt-5 py-5 mb-5 mb-md-0">
     <b-container fluid>
       <b-row class="justify-content-center my-3 main-row">
-        <b-col sm="4" class="text-left px-3 px-md-5">
+        <b-col sm="4" md="6" xl="4" class="text-left px-3 px-md-4 px-xl-5">
           <h6 class="text-center text-md-left mb-4">JOIN OUR NEWSLETTER</h6>
           <b-form-input type="email" placeholder="Enter your email here*"></b-form-input>
           <FlatButton class="mt-3 mb-4" text="Subscribe Now"/>
@@ -11,7 +11,7 @@
         <div class="hr-holder d-none d-md-block">
           <div class="hr"></div>
         </div>
-        <b-col sm="4 px-3 px-md-5">
+        <b-col sm="4" md="6" xl="4" class="px-3 px-md-4 px-xl-5">
           <b-row class="pt-3 mt-4">
             <b-col cols="4">
               <b-row class="text-left">
