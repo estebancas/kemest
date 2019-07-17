@@ -12,9 +12,9 @@
       "types": [
         {
           "name": "feat:",
-          "emoji": "🌟",
-          "value": ":star2:",
-          "code": ":star2:",
+          "emoji": "🍻",
+          "value": ":beers:",
+          "code": ":beers:",
           "description": "A new feature"
         },
         {
@@ -40,9 +40,9 @@
         },
         {
           "name": "style:",
-          "emoji": "✏️️",
-          "value": ":pencil2:",
-          "code": ":pencil2:️",
+          "emoji": "🎨",
+          "value": ":art:",
+          "code": ":art:️",
           "description": "Doesn't affect the meaning of the code (white-space, semi-colons, etc)"
         },
         {
@@ -54,9 +54,9 @@
         },
         {
           "name": "refactor:",
-          "emoji": "🎨",
-          "value": ":art:",
-          "code": ":art:",
+          "emoji": "🔧",
+          "value": ":wrench:",
+          "code": ":wrench:",
           "description": " Neither fixes a bug nor adds a feature"
         },
         {
