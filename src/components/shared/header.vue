@@ -7,7 +7,7 @@
       <h2 class="mb-3 mt-3 mt-md-5 mb-md-0 title">kiwie</h2>
       <a class="hamburguer-menu d-block d-md-none" v-on:click="isOpen = true">
         <span>
-          <font-awesome-icon :icon="['fas', 'bars']"/>
+          <font-awesome-icon :icon="['fas', 'bars']" />
         </span>
       </a>
     </div>
@@ -17,7 +17,7 @@
           <div class="nav d-flex justify-content-center">
             <ul>
               <li>
-                <a href="#">Home</a>
+                <router-link to="/">Home</router-link>
               </li>
               <li>
                 <a href="#">Shop</a>
@@ -26,7 +26,7 @@
                 <a href="#">Press</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <router-link to="/about">About</router-link>
               </li>
               <li>
                 <a href="#">Contact</a>
@@ -39,7 +39,7 @@
     <div v-if="isOpen" class="fixed-top mobile-menu">
       <a class="close-mobile-menu" v-on:click="isOpen = false">
         <span>
-          <font-awesome-icon :icon="['fas', 'times']"/>
+          <font-awesome-icon :icon="['fas', 'times']" />
         </span>
       </a>
       <div class="d-flex justify-content-center">
@@ -53,7 +53,7 @@
             <a href="#">Shop</a>
             <a class="arrow position-absolute" v-b-toggle.collapse-1>
               <span>
-                <font-awesome-icon :icon="['fas', 'chevron-down']"/>
+                <font-awesome-icon :icon="['fas', 'chevron-down']" />
               </span>
             </a>
             <b-collapse id="collapse-1" class="mt-2">

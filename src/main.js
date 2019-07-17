@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import store from './store/store'
+import router from '@/router'
 
 // Fontawesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -33,5 +34,6 @@ import './assets/css/main.css'
 
 new Vue({
   render: h => h(App),
+  router,
   store,
 }).$mount('#app')
