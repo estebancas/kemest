@@ -4,11 +4,6 @@ Vue app made with 💚
 
 ------
 
-## Project setup
-```
-npm install
-```
-
 ### External dependencies
 
 #### Commitizen
@@ -38,6 +33,11 @@ To commit a change you must type `git cz`, select the proper option for your cha
   docs:      📚  Documentation change
   refactor:  🔧   Neither fixes a bug nor adds a feature
 (Move up and down to reveal more choices)
+```
+
+## Project setup
+```
+npm install
 ```
 
 ### Compiles and hot-reloads for development
