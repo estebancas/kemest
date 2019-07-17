@@ -31,7 +31,7 @@ To commit a change you must type `git cz`, select the proper option for your cha
   chore:     🔩  Doesn't modify src or test files
   style:     🎨  Doesn't affect the meaning of the code (white-space, semi-colons, etc)
   docs:      📚  Documentation change
-  refactor:  🔧   Neither fixes a bug nor adds a feature
+  refactor:  🔧   Neither fixes a bug or adds a feature
 (Move up and down to reveal more choices)
 ```
 
