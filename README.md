@@ -28,7 +28,7 @@ $ echo '{ "path": "cz-emoji" }' > ~/.czrc
 
 To commit a change you must type `git cz`, select the proper option for your change and follow the steps that will be shown
 
-```bash
+```
 ? Select the type of change you're committing: (Use arrow keys or type to search)
 > feat:      🍻  A new feature
   fix:       💩  A bug fix
