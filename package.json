@@ -57,7 +57,7 @@
           "emoji": "🔧",
           "value": ":wrench:",
           "code": ":wrench:",
-          "description": " Neither fixes a bug nor adds a feature"
+          "description": " Neither fixes a bug or adds a feature"
         },
         {
           "name": "perf:",
