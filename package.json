@@ -7,10 +7,101 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "config": {
+    "cz-emoji": {
+      "types": [
+        {
+          "name": "feat:",
+          "emoji": "🍻",
+          "value": ":beers:",
+          "code": ":beers:",
+          "description": "A new feature"
+        },
+        {
+          "name": "fix:",
+          "emoji": "💩",
+          "value": ":poop:",
+          "code": ":poop:",
+          "description": "A bug fix"
+        },
+        {
+          "name": "test:",
+          "emoji": "🚓",
+          "value": ":police_car:",
+          "code": ":police_car:",
+          "description": "Testing improved with new or fixed tests"
+        },
+        {
+          "name": "chore:",
+          "emoji": "🔩",
+          "value": ":nut_and_bolt:",
+          "code": ":nut_and_bolt:",
+          "description": "Doesn't modify src or test files"
+        },
+        {
+          "name": "style:",
+          "emoji": "🎨",
+          "value": ":art:",
+          "code": ":art:️",
+          "description": "Doesn't affect the meaning of the code (white-space, semi-colons, etc)"
+        },
+        {
+          "name": "docs:",
+          "emoji": "📚",
+          "value": ":books:",
+          "code": ":books:",
+          "description": "Documentation change"
+        },
+        {
+          "name": "refactor:",
+          "emoji": "🔧",
+          "value": ":wrench:",
+          "code": ":wrench:",
+          "description": " Neither fixes a bug nor adds a feature"
+        },
+        {
+          "name": "perf:",
+          "emoji": "💰",
+          "value": ":moneybag:",
+          "code": ":moneybag:",
+          "description": "Improves performance with this change"
+        },
+        {
+          "name": "build:",
+          "emoji": "🚀",
+          "value": ":rocket:",
+          "code": ":rocket:",
+          "description": "Build system config or external dependencies"
+        },
+        {
+          "name": "ci:",
+          "emoji": "🚥",
+          "value": ":traffic_light:",
+          "code": ":traffic_light:",
+          "description": "CI config files and scripts"
+        },
+        {
+          "name": "revert:",
+          "emoji": "💊",
+          "value": ":pill:",
+          "code": ":pill:",
+          "description": "Reverts a previous commit"
+        }
+      ]
+    }
+  },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-regular-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "bootstrap-vue": "^2.0.0-rc.16",
     "core-js": "^2.6.5",
-    "vue": "^2.6.6"
+    "vue": "^2.6.6",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-router": "^3.0.7",
+    "vuex": "^3.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",
@@ -19,6 +110,8 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
