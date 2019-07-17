@@ -19,9 +19,9 @@
         },
         {
           "name": "fix:",
-          "emoji": "🐞",
-          "value": ":beetle:",
-          "code": ":beetle:",
+          "emoji": "💩",
+          "value": ":poop:",
+          "code": ":poop:",
           "description": "A bug fix"
         },
         {
