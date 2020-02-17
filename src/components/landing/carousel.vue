@@ -75,7 +75,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .carousel-holder {
   position: relative;
 }
@@ -92,6 +92,9 @@ export default {
 
 .overlay-info {
   color: white;
+  label {
+    padding: 5px 15px;
+  }
 }
 
 .overlay-info p {
@@ -104,7 +107,7 @@ export default {
 }
 
 .overlay-info label:hover {
-  color: #dbfcde !important;
+  background-color: gray;
   cursor: pointer;
 }
 </style>

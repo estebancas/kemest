@@ -1,6 +1,6 @@
-# kiwie
+# Kemest
 
-Vue app made with 💚
+Vue app made with 💜
 
 ------
 

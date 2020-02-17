@@ -136,6 +136,9 @@ export default {
   .content {
     a {
       cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       &:hover {
         color: white !important;
       }

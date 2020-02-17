@@ -50,27 +50,31 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .card-holder {
   width: 100%;
   position: relative;
 }
 
-.card-holder .picture-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.card-holder .picture-overlay div {
-  color: white;
+.card-holder {
+  .picture-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    label {
+      padding: 5px 15px;
+    }
+    div {
+      color: white;
+    }
+  }
 }
 
 .card-holder .picture-overlay label:hover {
-  color: #dbfcde !important;
+  background-color: gray;
   cursor: pointer;
 }
 

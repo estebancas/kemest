@@ -4,7 +4,8 @@
       <p class="my-2">Free Shipping Over $50 + 3 Free Samples With Every Order</p>
     </div>
     <div class="px-4 position-relative">
-      <h2 class="mb-3 mt-3 mt-md-5 mb-md-0 title">kiwie</h2>
+      <h2 class="mt-3 mt-md-5 mb-md-0 title">Kemest Strelitzia</h2>
+      <h6 class="mb-3 mb-md-0 subtitle">DRY & BLUE</h6>
       <a class="hamburguer-menu d-block d-md-none" v-on:click="isOpen = true">
         <span>
           <font-awesome-icon :icon="['fas', 'bars']" />
@@ -148,12 +149,20 @@ export default {
   }
 }
 
-.header .title {
-  letter-spacing: 4px;
+.header {
+  .title {
+    letter-spacing: 4px;
+  }
+  .subtitle {
+    letter-spacing: 12px;
+  }
 }
 
 .header-banner {
   background-color: $primary-color;
+  p {
+    color: white !important;
+  }
 }
 
 .nav ul {
