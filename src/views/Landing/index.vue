@@ -12,11 +12,11 @@
   </div>
 </template>
 <script>
-import CustomCarousel from "./carousel.vue";
-import CardSwiper from "./slider/cardSwiper";
-import ShopItemTop from "./shopItems/shopItemTop.vue";
-import ShopItemBottom from "./shopItems/shopItemBottom.vue";
-import Community from "./community/community.vue";
+import CustomCarousel from "./carousel";
+import CardSwiper from "./Slider/cardSwiper";
+import ShopItemTop from "./ShopItems/shopItemTop";
+import ShopItemBottom from "./ShopItems/shopItemBottom";
+import Community from "./Community";
 
 export default {
   name: "LandingPage",

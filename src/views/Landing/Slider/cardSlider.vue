@@ -1,7 +1,7 @@
 <template>
   <div id="slider" class="slider" @mousemove="mouseMoving($event)">
     <div class="slider-cards" :style="`transform: translate3d(${cardsX}px,0,0)`">
-      <SingleSlider
+      <OrderItem
         v-for="(slide, index) in slides"
         @mousedown="startDrag($event)"
         @mouseup="stopDrag($event)"
@@ -9,17 +9,17 @@
         v-bind:img="slide.image"
         v-bind:price="slide.price"
         v-bind:name="slide.name">
-      </SingleSlider>
+      </OrderItem>
     </div>
   </div>
 </template>
 <script>
-import SingleSlider from "./slide.vue";
+import OrderItem from "../../Orders/item";
 
 export default {
   name: "CardSlider",
   components: {
-    SingleSlider
+    OrderItem
   },
   data() {
     return {

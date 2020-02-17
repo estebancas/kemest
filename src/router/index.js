@@ -2,8 +2,8 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // Components
-import LandingPage from '@/components/landing/landingPage';
-import About from '@/components/about/about';
+import LandingPage from '@/views/Landing';
+import About from '@/views/About';
 
 Vue.use(Router);
 

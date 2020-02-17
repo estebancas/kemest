@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import FlatButton from "../shared/button/flatButton";
+import FlatButton from "../Button";
 
 export default {
   name: "Footer",

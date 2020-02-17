@@ -3,7 +3,7 @@
     <b-col cols="12" class="p-0">
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(slide, index) in slides" v-bind:key="index">
-          <SingleSlider :img="slide.image" :price="slide.price" :name="slide.name"/>
+          <OrderItem :img="slide.image" :price="slide.price" :name="slide.name"/>
         </swiper-slide>
         <div class="swiper-button-prev d-block d-md-none" slot="button-prev"></div>
         <div class="swiper-button-next d-block d-md-none" slot="button-next"></div>
@@ -12,7 +12,7 @@
   </b-row>
 </template>
 <script>
-import SingleSlider from "./slide.vue";
+import OrderItem from "../../Orders/item";
 import { swiper, swiperSlide } from "vue-awesome-swiper";
 
 import "swiper/dist/css/swiper.css";
@@ -20,7 +20,7 @@ import "swiper/dist/css/swiper.css";
 export default {
   name: "CardSwiper",
   components: {
-    SingleSlider,
+    OrderItem,
     swiper,
     swiperSlide
   },

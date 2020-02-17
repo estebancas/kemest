@@ -22,7 +22,7 @@
 </template>
 <script>
 export default {
-  name: "SingleSlider",
+  name: "OrderItem",
   props: {
     img: {
       type: String,
