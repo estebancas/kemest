@@ -3,12 +3,18 @@ import { actions as globalActions, mutations as globalMutations } from './Global
 export default {
     namespaced: true,
     state: {
-        device: {}
+        device: {},
+        modalVisible: false,
+        modalComponent: 'none',
     },
     actions: {
         ...globalActions
     },
     mutations: {
         ...globalMutations
+    },
+    getters: {
+        modalComponent: state => state.modalComponent,
+        modalVisible: state => state.modalVisible,
     }
 };

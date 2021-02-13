@@ -11,6 +11,11 @@ export default {
           default: () => 'Save',
           require: false
       }
+  },
+  methods: {
+    click() {
+      this.$emit('onClick')
+    }
   }
 };
 </script>

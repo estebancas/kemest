@@ -3,10 +3,10 @@
     <div class="picture-holder">
       <a>
         <figure>
-          <img :src="img" draggable="false">
+          <img :src="img" draggable="false" />
         </figure>
       </a>
-      <div class="picture-overlay text-center">QUICK VIEW</div>
+      <div class="picture-overlay text-center" @click="showModal('OrderItemModal')">QUICK VIEW</div>
     </div>
     <div class="item-description pt-2 d-flex">
       <b-row>
@@ -21,8 +21,18 @@
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: "OrderItem",
+  data() {
+    return {
+      isVisible: false
+    };
+  },
+  methods: {
+    ...mapActions('Globals', ['showModal']),
+  },
   props: {
     img: {
       type: String,
@@ -36,7 +46,7 @@ export default {
       type: String,
       required: true
     }
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
